@@ -35,7 +35,7 @@ export default function Navbar() {
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "glass-strong border-b border-border" : "bg-transparent"
                 }`}
         >
-            <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+            <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 sm:py-4">
                 {/* Logo */}
                 <a
                     href="#"
@@ -78,13 +78,13 @@ export default function Navbar() {
                         exit={{ opacity: 0, height: 0 }}
                         className="glass-strong overflow-hidden border-b border-border md:hidden"
                     >
-                        <div className="flex flex-col gap-4 px-6 py-6">
+                        <div className="flex flex-col gap-4 px-4 py-6 sm:px-6">
                             {navLinks.map((link) => (
                                 <a
                                     key={link.href}
                                     href={link.href}
                                     onClick={() => setIsOpen(false)}
-                                    className="font-mono text-sm text-muted transition-colors hover:text-neon-cyan"
+                                    className="touch-manipulation font-mono text-sm text-muted transition-colors hover:text-neon-cyan"
                                 >
                                     {link.label}
                                 </a>

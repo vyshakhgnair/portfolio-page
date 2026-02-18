@@ -10,7 +10,7 @@ export default function SkillsSection() {
         <section id="skills" className="relative py-24 sm:py-32">
             <div className="pointer-events-none absolute left-0 top-1/2 h-80 w-80 -translate-y-1/2 rounded-full bg-neon-cyan/4 blur-[120px]" />
 
-            <div className="mx-auto max-w-5xl px-6">
+            <div className="mx-auto max-w-5xl px-4 sm:px-6">
                 <AnimatedSection>
                     <div className="mb-14 max-w-2xl">
                         <p className="mb-3 font-mono text-sm tracking-wider text-neon-cyan">

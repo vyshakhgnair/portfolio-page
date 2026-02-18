@@ -30,7 +30,10 @@ export default function ParticleNetwork() {
         window.addEventListener("resize", resize);
 
         // Create particles
-        const count = Math.min(Math.floor((canvas.width * canvas.height) / 18000), 80);
+        const isMobile = canvas.width < 640;
+        const count = isMobile
+            ? Math.min(Math.floor((canvas.width * canvas.height) / 25000), 30)
+            : Math.min(Math.floor((canvas.width * canvas.height) / 18000), 80);
         const particles: Particle[] = [];
         for (let i = 0; i < count; i++) {
             particles.push({
@@ -56,7 +59,7 @@ export default function ParticleNetwork() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             const mx = mouseRef.current.x;
             const my = mouseRef.current.y;
-            const connectionDist = 140;
+            const connectionDist = canvas.width < 640 ? 100 : 140;
             const mouseDist = 200;
 
             for (let i = 0; i < particles.length; i++) {

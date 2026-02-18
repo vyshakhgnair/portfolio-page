@@ -17,10 +17,10 @@ export default function HeroSection() {
 
             {/* Radial glow overlays */}
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(6,182,212,0.08)_0%,transparent_60%)]" />
-            <div className="pointer-events-none absolute -left-48 top-1/4 h-[500px] w-[500px] rounded-full bg-neon-violet/8 blur-[160px]" />
-            <div className="pointer-events-none absolute -right-48 bottom-1/4 h-[500px] w-[500px] rounded-full bg-neon-cyan/6 blur-[160px]" />
+            <div className="pointer-events-none absolute -left-48 top-1/4 hidden h-[500px] w-[500px] rounded-full bg-neon-violet/8 blur-[160px] sm:block" />
+            <div className="pointer-events-none absolute -right-48 bottom-1/4 hidden h-[500px] w-[500px] rounded-full bg-neon-cyan/6 blur-[160px] sm:block" />
 
-            <div className="relative z-10 mx-auto max-w-5xl px-6 text-center">
+            <div className="relative z-10 mx-auto max-w-5xl px-4 text-center sm:px-6">
                 {/* Headline — typewriter */}
                 <h1 className="mb-6 text-4xl font-bold leading-[1.1] tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
                     <TypewriterText
@@ -36,7 +36,7 @@ export default function HeroSection() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.8, delay: 2.5 }}
-                    className="mx-auto mb-12 max-w-2xl text-base leading-relaxed text-muted sm:text-lg md:text-xl"
+                    className="mx-auto mb-8 max-w-2xl text-sm leading-relaxed text-muted sm:mb-12 sm:text-lg md:text-xl"
                 >
                     {hero.subHeadline}
                 </motion.p>
@@ -46,7 +46,7 @@ export default function HeroSection() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 3 }}
-                    className="mb-14 flex flex-col items-center justify-center gap-4 sm:flex-row"
+                    className="mb-10 flex flex-col items-center justify-center gap-3 sm:mb-14 sm:flex-row sm:gap-4"
                 >
                     {/* Primary CTA — glow */}
                     <a

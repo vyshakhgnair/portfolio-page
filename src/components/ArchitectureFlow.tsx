@@ -63,7 +63,7 @@ export default function ArchitectureFlow({ type }: { type: ArchType }) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.4 }}
-            className="mt-3 w-full rounded-xl border border-border bg-[#0a0e14]/60 p-4"
+            className="mt-3 w-full rounded-xl border border-border bg-[#0a0e14]/60 p-2 sm:p-4"
         >
             <svg
                 viewBox="0 0 510 110"

@@ -30,7 +30,7 @@ function PublicationCard({
 
     return (
         <AnimatedSection delay={idx * 0.12}>
-            <div className="glass group flex flex-col gap-5 rounded-2xl p-6 transition-all duration-500 hover:border-neon-cyan/30 hover:glow-border sm:flex-row sm:items-start sm:p-8">
+            <div className="glass group flex flex-col gap-4 rounded-2xl p-4 transition-all duration-500 hover:border-neon-cyan/30 hover:glow-border sm:flex-row sm:items-start sm:gap-5 sm:p-8">
                 {/* Icon */}
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-border bg-neon-cyan/10 transition-colors group-hover:border-neon-cyan/30">
                     {pub.type === "Journal" ? (
@@ -41,7 +41,7 @@ function PublicationCard({
                 </div>
 
                 {/* Content */}
-                <div className="flex-1">
+                <div className="min-w-0 flex-1">
                     <div className="mb-2 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                         <h3 className="text-lg font-semibold text-white">
                             {pub.shortTitle}
@@ -52,8 +52,8 @@ function PublicationCard({
                                 <button
                                     onClick={() => setShowArch(!showArch)}
                                     className={`rounded-lg border p-1.5 transition-all duration-200 ${showArch
-                                            ? "border-neon-cyan/40 text-neon-cyan"
-                                            : "border-border text-slate-400 hover:border-neon-cyan/40 hover:text-neon-cyan"
+                                        ? "border-neon-cyan/40 text-neon-cyan"
+                                        : "border-border text-slate-400 hover:border-neon-cyan/40 hover:text-neon-cyan"
                                         }`}
                                     aria-label={
                                         showArch ? "Show description" : "Show architecture"
@@ -65,8 +65,8 @@ function PublicationCard({
                             )}
                             <span
                                 className={`inline-flex w-fit items-center rounded-full border px-3 py-0.5 font-mono text-xs ${pub.type === "Journal"
-                                        ? "border-neon-cyan/20 bg-neon-cyan/10 text-neon-cyan"
-                                        : "border-neon-violet/20 bg-neon-violet/10 text-neon-violet"
+                                    ? "border-neon-cyan/20 bg-neon-cyan/10 text-neon-cyan"
+                                    : "border-neon-violet/20 bg-neon-violet/10 text-neon-violet"
                                     }`}
                             >
                                 {pub.type} &middot; {pub.year}
@@ -130,7 +130,7 @@ export default function ResearchSection() {
         <section id="research" className="relative py-24 sm:py-32">
             <div className="pointer-events-none absolute right-0 bottom-0 h-72 w-72 rounded-full bg-neon-cyan/4 blur-[100px]" />
 
-            <div className="mx-auto max-w-5xl px-6">
+            <div className="mx-auto max-w-5xl px-4 sm:px-6">
                 <AnimatedSection>
                     <div className="mb-14 max-w-2xl">
                         <p className="mb-3 font-mono text-sm tracking-wider text-neon-cyan">

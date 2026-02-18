@@ -27,7 +27,7 @@ export default function AchievementsSection() {
         <section id="achievements" className="relative py-24 sm:py-32">
             <div className="pointer-events-none absolute right-0 top-0 h-[400px] w-[400px] rounded-full bg-neon-violet/4 blur-[140px]" />
 
-            <div className="mx-auto max-w-5xl px-6">
+            <div className="mx-auto max-w-5xl px-4 sm:px-6">
                 <AnimatedSection>
                     <div className="mb-14 max-w-2xl">
                         <p className="mb-3 font-mono text-sm tracking-wider text-neon-cyan">
@@ -46,7 +46,7 @@ export default function AchievementsSection() {
                         return (
                             <AnimatedSection key={idx} delay={idx * 0.1}>
                                 <div
-                                    className={`glass group flex h-full items-center gap-5 rounded-2xl p-6 transition-all duration-500 hover:glow-border ${colors.hover}`}
+                                    className={`glass group flex h-full flex-col items-center gap-4 rounded-2xl p-5 text-center transition-all duration-500 hover:glow-border sm:flex-row sm:items-center sm:gap-5 sm:p-6 sm:text-left ${colors.hover}`}
                                 >
                                     {/* Icon */}
                                     <div

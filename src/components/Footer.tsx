@@ -23,7 +23,7 @@ export default function Footer() {
                     </p>
                     <button
                         onClick={copyEmail}
-                        className="group inline-flex items-center gap-1.5 font-mono text-xs text-muted transition-colors hover:text-neon-cyan"
+                        className="group inline-flex items-center gap-1.5 break-all font-mono text-xs text-muted transition-colors hover:text-neon-cyan"
                     >
                         {contact.email}
                         <Copy

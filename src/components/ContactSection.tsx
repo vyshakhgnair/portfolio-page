@@ -17,7 +17,7 @@ export default function ContactSection() {
         <section id="contact" className="relative py-24 sm:py-32">
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(139,92,246,0.04)_0%,transparent_60%)]" />
 
-            <div className="mx-auto max-w-3xl px-6 text-center">
+            <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
                 <AnimatedSection>
                     <p className="mb-3 font-mono text-sm tracking-wider text-neon-cyan">
                         CONTACT

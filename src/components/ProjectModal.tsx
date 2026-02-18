@@ -49,25 +49,25 @@ export default function ProjectModal({ project, layoutId, onClose }: Props) {
 
             {/* Modal */}
             <div
-                className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6"
+                className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 md:p-6"
                 onClick={(e) => {
                     if (e.target === e.currentTarget) onClose();
                 }}
             >
                 <motion.div
                     layoutId={layoutId}
-                    className="relative max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-2xl border border-border bg-[#0d1117]/98 shadow-2xl shadow-black/50 backdrop-blur-2xl"
+                    className="relative max-h-[95vh] w-full max-w-3xl overflow-y-auto rounded-xl border border-border bg-[#0d1117]/98 shadow-2xl shadow-black/50 backdrop-blur-2xl sm:max-h-[90vh] sm:rounded-2xl"
                     transition={{ type: "spring", stiffness: 300, damping: 30 }}
                 >
                     {/* Close button */}
                     <button
                         onClick={onClose}
-                        className="absolute right-4 top-4 z-10 rounded-lg border border-border p-2 text-slate-400 transition-colors hover:border-neon-cyan/40 hover:text-white"
+                        className="absolute right-3 top-3 z-10 flex h-10 w-10 items-center justify-center rounded-lg border border-border text-slate-400 transition-colors hover:border-neon-cyan/40 hover:text-white sm:right-4 sm:top-4 sm:h-auto sm:w-auto sm:p-2"
                     >
                         <X size={16} />
                     </button>
 
-                    <div className="p-6 sm:p-10">
+                    <div className="p-4 sm:p-6 md:p-10">
                         {/* Header */}
                         <div className="mb-6">
                             <div className="mb-3 flex flex-wrap items-center gap-3">

@@ -38,7 +38,7 @@ export default function ExperienceTimeline() {
         <section id="experience" className="relative py-24 sm:py-32">
             <div className="pointer-events-none absolute left-0 top-0 h-[400px] w-[400px] rounded-full bg-neon-cyan/4 blur-[140px]" />
 
-            <div className="mx-auto max-w-5xl px-6">
+            <div className="mx-auto max-w-5xl px-4 sm:px-6">
                 <AnimatedSection>
                     <div className="mb-14 max-w-2xl">
                         <p className="mb-3 font-mono text-sm tracking-wider text-neon-cyan">
@@ -68,7 +68,7 @@ export default function ExperienceTimeline() {
                             const colors = accentColors[item.accent];
                             return (
                                 <AnimatedSection key={idx} delay={idx * 0.15}>
-                                    <div className="relative flex gap-6 sm:gap-8">
+                                    <div className="relative flex gap-4 sm:gap-6 md:gap-8">
                                         {/* Dot */}
                                         <div className="relative z-10 mt-1.5 flex shrink-0">
                                             <div
@@ -78,7 +78,7 @@ export default function ExperienceTimeline() {
 
                                         {/* Card */}
                                         <div
-                                            className={`glass group flex-1 rounded-2xl p-6 transition-all duration-500 hover:glow-border sm:p-8 ${colors.hover}`}
+                                            className={`glass group min-w-0 flex-1 rounded-2xl p-5 transition-all duration-500 hover:glow-border sm:p-6 md:p-8 ${colors.hover}`}
                                         >
                                             {/* Header */}
                                             <div className="mb-4 flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">

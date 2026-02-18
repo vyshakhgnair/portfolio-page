@@ -44,6 +44,16 @@ export default function ChatWidget() {
         }
     }, [open]);
 
+    // Lock body scroll when chat is open on mobile
+    useEffect(() => {
+        if (open && window.innerWidth < 480) {
+            document.body.style.overflow = "hidden";
+            return () => {
+                document.body.style.overflow = "";
+            };
+        }
+    }, [open]);
+
     const sendMessage = useCallback(
         async (text: string) => {
             if (!text.trim() || loading) return;
@@ -96,7 +106,7 @@ export default function ChatWidget() {
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.95 }}
                         onClick={() => setOpen(true)}
-                        className="fixed bottom-20 right-6 z-40 flex h-14 w-14 items-center justify-center rounded-full border border-neon-cyan/30 bg-surface/90 shadow-lg shadow-neon-cyan/10 backdrop-blur-xl transition-colors hover:border-neon-cyan/50 hover:shadow-neon-cyan/20"
+                        className="fixed bottom-20 right-6 z-40 flex h-14 w-14 items-center justify-center rounded-full border border-neon-cyan/30 bg-surface/90 shadow-lg shadow-neon-cyan/10 backdrop-blur-xl transition-colors hover:border-neon-cyan/50 hover:shadow-neon-cyan/20 sm:bottom-20 sm:right-6"
                     >
                         <Sparkles size={22} className="text-neon-cyan" />
                     </motion.button>
@@ -111,10 +121,11 @@ export default function ChatWidget() {
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 20, scale: 0.95 }}
                         transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-                        className="fixed bottom-6 right-6 z-50 flex h-[520px] w-[380px] flex-col overflow-hidden rounded-2xl border border-border bg-[#0d1117]/98 shadow-2xl shadow-black/40 backdrop-blur-2xl max-[420px]:left-3 max-[420px]:right-3 max-[420px]:w-auto"
+                        className="fixed z-50 flex flex-col overflow-hidden rounded-2xl border border-border bg-[#0d1117]/98 shadow-2xl shadow-black/40 backdrop-blur-2xl
+                            inset-0 h-[100dvh] w-full rounded-none sm:inset-auto sm:bottom-6 sm:right-6 sm:h-[520px] sm:w-[380px] sm:rounded-2xl"
                     >
                         {/* Header */}
-                        <div className="flex items-center justify-between border-b border-border px-5 py-4">
+                        <div className="flex items-center justify-between border-b border-border px-4 py-3 sm:px-5 sm:py-4">
                             <div className="flex items-center gap-3">
                                 <div className="flex h-9 w-9 items-center justify-center rounded-xl border border-neon-cyan/20 bg-neon-cyan/10">
                                     <Sparkles size={16} className="text-neon-cyan" />
@@ -149,7 +160,7 @@ export default function ChatWidget() {
                         {/* Messages */}
                         <div
                             ref={scrollRef}
-                            className="flex-1 space-y-3 overflow-y-auto px-4 py-4"
+                            className="flex-1 space-y-3 overflow-y-auto px-3 py-4 sm:px-4"
                         >
                             {messages.map((msg, i) => (
                                 <div
@@ -159,10 +170,10 @@ export default function ChatWidget() {
                                 >
                                     <div
                                         className={`max-w-[85%] rounded-2xl px-4 py-2.5 text-[13px] leading-relaxed ${msg.role === "user"
-                                                ? "rounded-br-md bg-neon-cyan/15 text-neon-cyan"
-                                                : msg.role === "system"
-                                                    ? "rounded-bl-md border border-border bg-surface-light/50 font-mono text-xs text-slate-400"
-                                                    : "rounded-bl-md bg-surface-light/80 text-slate-300"
+                                            ? "rounded-br-md bg-neon-cyan/15 text-neon-cyan"
+                                            : msg.role === "system"
+                                                ? "rounded-bl-md border border-border bg-surface-light/50 font-mono text-xs text-slate-400"
+                                                : "rounded-bl-md bg-surface-light/80 text-slate-300"
                                             }`}
                                     >
                                         {msg.text}
@@ -183,7 +194,7 @@ export default function ChatWidget() {
                         </div>
 
                         {/* Quick Prompts */}
-                        <div className="flex gap-2 overflow-x-auto border-t border-border px-4 py-3 scrollbar-hide">
+                        <div className="flex gap-2 overflow-x-auto border-t border-border px-3 py-2.5 scrollbar-hide sm:px-4 sm:py-3">
                             {QUICK_PROMPTS.map((prompt) => (
                                 <button
                                     key={prompt}
@@ -197,7 +208,7 @@ export default function ChatWidget() {
                         </div>
 
                         {/* Input */}
-                        <div className="border-t border-border px-4 py-3">
+                        <div className="border-t border-border px-3 py-2.5 pb-[env(safe-area-inset-bottom,12px)] sm:px-4 sm:py-3">
                             <form
                                 onSubmit={(e) => {
                                     e.preventDefault();
@@ -216,7 +227,7 @@ export default function ChatWidget() {
                                 <button
                                     type="submit"
                                     disabled={!input.trim() || loading}
-                                    className="flex h-9 w-9 items-center justify-center rounded-xl border border-border text-slate-400 transition-all hover:border-neon-cyan/40 hover:text-neon-cyan disabled:opacity-30"
+                                    className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-border text-slate-400 transition-all hover:border-neon-cyan/40 hover:text-neon-cyan disabled:opacity-30"
                                 >
                                     <Send size={14} />
                                 </button>

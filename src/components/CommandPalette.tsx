@@ -160,10 +160,10 @@ export default function CommandPalette() {
 
     return (
         <>
-            {/* Floating hint button */}
+            {/* Floating hint button — compact on mobile */}
             <button
                 onClick={() => setOpen(true)}
-                className="fixed bottom-6 right-6 z-40 flex items-center gap-2 rounded-full border border-border bg-surface/80 px-4 py-2.5 font-mono text-xs text-slate-400 shadow-lg backdrop-blur-xl transition-all duration-300 hover:border-neon-cyan/40 hover:text-neon-cyan hover:shadow-[0_0_20px_rgba(6,182,212,0.15)]"
+                className="fixed bottom-6 right-6 z-40 flex items-center gap-2 rounded-full border border-border bg-surface/80 px-3 py-2 font-mono text-xs text-slate-400 shadow-lg backdrop-blur-xl transition-all duration-300 hover:border-neon-cyan/40 hover:text-neon-cyan hover:shadow-[0_0_20px_rgba(6,182,212,0.15)] sm:px-4 sm:py-2.5"
             >
                 <Search size={14} />
                 <span className="hidden sm:inline">Press</span>
@@ -186,13 +186,13 @@ export default function CommandPalette() {
                             onClick={() => setOpen(false)}
                         />
 
-                        {/* Dialog */}
+                        {/* Dialog — closer to top on mobile */}
                         <motion.div
                             initial={{ opacity: 0, scale: 0.96, y: -10 }}
                             animate={{ opacity: 1, scale: 1, y: 0 }}
                             exit={{ opacity: 0, scale: 0.96, y: -10 }}
                             transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
-                            className="fixed left-1/2 top-[20vh] z-50 w-[90vw] max-w-lg -translate-x-1/2"
+                            className="fixed left-1/2 z-50 w-[calc(100vw-2rem)] max-w-lg -translate-x-1/2 top-[12vh] sm:top-[20vh]"
                         >
                             <Command
                                 className="overflow-hidden rounded-2xl border border-border bg-[#0d1117]/95 shadow-2xl shadow-black/40 backdrop-blur-2xl"
@@ -205,7 +205,7 @@ export default function CommandPalette() {
                                         value={search}
                                         onValueChange={setSearch}
                                         placeholder="Type a command or search…"
-                                        className="h-14 w-full bg-transparent text-sm text-white placeholder-slate-500 outline-none"
+                                        className="h-12 w-full bg-transparent text-sm text-white placeholder-slate-500 outline-none sm:h-14"
                                     />
                                     <kbd
                                         onClick={() => setOpen(false)}
@@ -216,7 +216,7 @@ export default function CommandPalette() {
                                 </div>
 
                                 {/* Results */}
-                                <Command.List className="max-h-72 overflow-y-auto p-2">
+                                <Command.List className="max-h-[50vh] overflow-y-auto p-2 sm:max-h-72">
                                     <Command.Empty className="py-8 text-center text-sm text-slate-500">
                                         No results found.
                                     </Command.Empty>

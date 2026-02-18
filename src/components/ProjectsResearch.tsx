@@ -66,8 +66,8 @@ function ProjectCard({
                                         setShowArch(!showArch);
                                     }}
                                     className={`rounded-lg border p-2 transition-all duration-200 ${showArch
-                                            ? "border-neon-cyan/40 text-neon-cyan"
-                                            : "border-border text-slate-400 hover:border-neon-cyan/40 hover:text-neon-cyan"
+                                        ? "border-neon-cyan/40 text-neon-cyan"
+                                        : "border-border text-slate-400 hover:border-neon-cyan/40 hover:text-neon-cyan"
                                         }`}
                                     aria-label={
                                         showArch ? "Show description" : "Show architecture"
@@ -171,7 +171,7 @@ export default function ProjectsResearch() {
         <section id="projects" className="relative py-24 sm:py-32">
             <div className="pointer-events-none absolute left-1/2 top-0 h-[500px] w-[600px] -translate-x-1/2 rounded-full bg-neon-cyan/3 blur-[160px]" />
 
-            <div className="mx-auto max-w-6xl px-6">
+            <div className="mx-auto max-w-6xl px-4 sm:px-6">
                 <AnimatedSection>
                     <div className="mb-14 max-w-2xl">
                         <p className="mb-3 font-mono text-sm tracking-wider text-neon-cyan">
@@ -197,8 +197,8 @@ export default function ProjectsResearch() {
                                     data-tab={tab.key}
                                     onClick={() => setActiveTab(tab.key)}
                                     className={`relative z-10 rounded-lg px-5 py-2.5 font-mono text-sm font-medium transition-all duration-300 ${activeTab === tab.key
-                                            ? "text-white"
-                                            : "text-slate-400 hover:text-slate-200"
+                                        ? "text-white"
+                                        : "text-slate-400 hover:text-slate-200"
                                         }`}
                                 >
                                     {tab.label}
