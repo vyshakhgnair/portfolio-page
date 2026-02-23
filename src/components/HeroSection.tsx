@@ -60,6 +60,9 @@ export default function HeroSection() {
                     {/* Secondary CTA — outline */}
                     <a
                         href={hero.secondaryCta.href}
+                        download
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 rounded-full border border-border px-8 py-3.5 text-sm font-medium text-foreground transition-all duration-300 hover:border-neon-cyan/40 hover:text-neon-cyan"
                     >
                         <Download size={16} />
