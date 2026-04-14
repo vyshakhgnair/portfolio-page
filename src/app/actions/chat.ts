@@ -62,7 +62,7 @@ ${sk}
 CONTACT:
 Email: ${contact.email}
 Location: ${contact.location}
-LinkedIn: https://linkedin.com/in/vyshakhgnair
+LinkedIn: https://www.linkedin.com/in/vyshakh-g-nair-2002/
 GitHub: https://github.com/vyshakhgnair
 `.trim();
 }

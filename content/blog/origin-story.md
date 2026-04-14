@@ -148,7 +148,7 @@ After the first year of college, something shifted in how I approached learning.
 
 I stopped treating it like coursework and started treating it like obsession.
 
-### Going Back to Andrew Ng — and Going Deep This Time
+### Mastering the Fundamentals: A Rigorous Path to Machine Learning
 
 Remember the ML course I had started in 12th and never finished? I went back to it in college — and this time, I didn't stop.
 
@@ -190,33 +190,23 @@ I won. Multiple times.
 
 But more valuable than the wins was what I learned from the losses. A judge who tells you *why* your approach is wrong in 2 minutes teaches you more than a week of self-study.
 
-### Joining a Deeptech Startup as Founding Engineer in AI
+### Founding Engineer at Corr Robotics: Scaling AI in Deeptech
 
 The startup was the crucible.
 
-I joined a **deeptech startup** as their **Founding Engineer in AI** — responsible entirely for the AI/ML layer of what they were building. This wasn't a feature or a side project. The AI *was* the product. That meant the technical decisions I made were the ones the company would live or die by.
+I joined **Corr Robotics** as their **Founding Engineer**, responsible entirely for the AI/ML layer. This was a deeptech challenge at the intersection of AI and robotics, where model errors didn't just produce wrong outputs—they had physical consequences. The AI *was* the product, meaning the technical decisions I made were the ones the company would live or die by.
 
 What I actually did day-to-day:
 
 - Designing the AI/ML systems architecture from scratch
 - Deciding what to build in-house vs. what to use off the shelf — and owning the consequences of those calls
-- Scaling the infrastructure as the product grew
+- Scaling the infrastructure as the product grew (eventually reaching a **₹5 crore valuation**)
 - Translating complex model decisions into language non-technical co-founders and early investors could understand and trust
-- Rebuilding things when they broke in production — which they always eventually do, always at the worst possible time
+- Building and deploying real AI systems that ran in the physical world, sharpening my focus on reliability and production-readiness
 
-The startup scaled to a **₹5 crore valuation**. That number felt surreal when it happened. To a college student running on 5 hours of sleep and three simultaneous commitments, it felt like proof that the idea — and the work — was real.
+This role felt surreal. To a college student running on 5 hours of sleep and three simultaneous commitments, reaching that valuation felt like proof that the idea — and the work — was real.
 
-But here's the part that doesn't make it into the highlight reel:
-
-Deeptech is relentless in a specific way. There's always a technical edge case that needs solving, a model that degraded in production, a deadline that moved up without warning. The mental load doesn't clock out. And when you're the only AI person on the team, that weight is entirely yours.
-
-### Becoming Founding Engineer at Corr Robotics
-
-Alongside this, I also joined **Corr Robotics as Founding Engineer** — working at the intersection of AI and robotics.
-
-This was a different kind of challenge. Robotics requires precision in a way that pure software doesn't. Your model's errors don't just produce a wrong output — they have physical consequences. That responsibility sharpened how I think about reliability, testing, and production-readiness in a way that has stayed with me ever since.
-
-I built and deployed real AI systems. Systems that ran in the real world, not just in notebooks.
+Deeptech is relentless. There's always a technical edge case, a model that degraded in production, or a deadline that moved up without warning. When you're the only AI person on the team, that weight is entirely yours.
 
 ### Stepping Away — The Hardest Decision
 
@@ -237,8 +227,7 @@ Then came placements. And they humbled me in a way nothing else had.
 By the time placement season started, my profile looked strong — at least on paper:
 
 - Dual degrees (BTech + IIT Madras BSc Data Science)
-- Founding Engineer in AI at a deeptech startup (₹5 crore valuation)
-- Founding Engineer at a robotics company
+- Founding Engineer in AI at Corr Robotics (Deeptech Startup, ₹5 crore valuation)
 - Published research (IEEE + journal)
 - Production AI/ML systems
 - Hackathon wins
@@ -287,7 +276,9 @@ Toward the end of placement season, the dynamic shifted.
 
 Not one — multiple. After months of silence, the doors opened. I had time to choose, to evaluate, to negotiate.
 
-I chose to join **Rappit as an AI/ML Engineer** — because it was exactly the domain I had been building toward since 2017. LLMs, Generative AI, production ML systems.
+I chose to join **Rappit as an AI/ML Engineer** — even though it meant turning down a much higher-paying offer from **TCS**. 
+
+I chose Rappit because it was exactly the domain I had been building toward since 2017: LLMs, Generative AI, and production ML systems. Choosing the dream role over the bigger paycheck was one of the easiest decisions I've ever made.
 
 The technology I had chosen as a 16-year-old, before I understood what it was.
 
@@ -345,8 +336,7 @@ The future rewards the ones who stayed.
 
 *This is the first post in a series where I'll be writing about AI/ML, building in public, career lessons, and everything I'm learning at Rappit. If this resonated, follow along — more coming soon.*
 
-*Connect with me on [LinkedIn](#) | Read more posts at [your website URL]*
-
+*Connect with me on [LinkedIn](https://www.linkedin.com/in/vyshakh-g-nair-2002/)
 ---
 
 *© Vyshakh · April 2026*

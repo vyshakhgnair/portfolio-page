@@ -111,7 +111,7 @@ export default function CommandPalette() {
             group: "Socials",
             onSelect: () => {
                 setOpen(false);
-                window.open("https://linkedin.com/in/vyshakhgnair", "_blank");
+                window.open("https://www.linkedin.com/in/vyshakh-g-nair-2002/", "_blank");
             },
         },
         {

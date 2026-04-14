@@ -43,7 +43,7 @@ export const socials = [
     { label: "GitHub", href: "https://github.com/vyshakhgnair", icon: Github },
     {
         label: "LinkedIn",
-        href: "https://linkedin.com/in/vyshakhgnair",
+        href: "https://www.linkedin.com/in/vyshakh-g-nair-2002/",
         icon: Linkedin,
     },
     { label: "Kaggle", href: "https://kaggle.com/vyshakhgnair", icon: Trophy },
