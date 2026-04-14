@@ -20,12 +20,13 @@ export const siteConfig = {
 
 // ── Navigation ───────────────────────────────────
 export const navLinks = [
-    { label: "Experience", href: "#experience" },
-    { label: "Projects", href: "#projects" },
-    { label: "Research", href: "#research" },
-    { label: "Achievements", href: "#achievements" },
-    { label: "Skills", href: "#skills" },
-    { label: "Contact", href: "#contact" },
+    { label: "Experience", href: "/#experience" },
+    { label: "Projects", href: "/#projects" },
+    { label: "Research", href: "/#research" },
+    { label: "Achievements", href: "/#achievements" },
+    { label: "Skills", href: "/#skills" },
+    { label: "Blog", href: "/blog" },
+    { label: "Contact", href: "/#contact" },
 ];
 
 // ── Hero ─────────────────────────────────────────
@@ -33,7 +34,7 @@ export const hero = {
     headline: "Architecting Intelligence.",
     subHeadline:
         "AI/ML Engineer specializing in Agentic Workflows, Scalable RAG Systems, and LLMs.",
-    primaryCta: { label: "View Projects", href: "#projects" },
+    primaryCta: { label: "View Projects", href: "/#projects" },
     secondaryCta: { label: "Download Resume", href: "/resume.pdf" },
 };
 
@@ -98,6 +99,7 @@ export const education = [
         institution: "IIT Madras",
         period: "2021 — 2024",
         icon: GraduationCap,
+        image: "/blog/origin-story/iitm-grad.png",
     },
 ];
 

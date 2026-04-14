@@ -2,6 +2,11 @@ import type { Metadata, Viewport } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/constants";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import CommandPalette from "@/components/CommandPalette";
+import ChatWidget from "@/components/ChatWidget";
+import { ToastProvider } from "@/components/Toast";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -42,7 +47,13 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased grain`}
       >
-        {children}
+        <ToastProvider>
+          <Navbar />
+          {children}
+          <Footer />
+          <CommandPalette />
+          <ChatWidget />
+        </ToastProvider>
       </body>
     </html>
   );

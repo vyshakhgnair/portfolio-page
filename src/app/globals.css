@@ -1,5 +1,5 @@
 @import "tailwindcss";
-
+@plugin "@tailwindcss/typography";
 /* ── Custom Theme — Aceternity Aesthetic ──────────── */
 @theme inline {
   --color-background: #000000;

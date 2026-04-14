@@ -4,6 +4,7 @@ import { navLinks, siteConfig } from "@/constants";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
+import Link from "next/link";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -37,25 +38,25 @@ export default function Navbar() {
         >
             <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 sm:py-4">
                 {/* Logo */}
-                <a
-                    href="#"
+                <Link
+                    href="/"
                     className="font-mono text-base font-bold tracking-tight text-foreground"
                 >
                     <span className="text-neon-cyan">&lt;</span>
                     {siteConfig.name.split(" ")[0]}
                     <span className="text-neon-cyan">/&gt;</span>
-                </a>
+                </Link>
 
                 {/* Desktop Links */}
                 <div className="hidden items-center gap-8 md:flex">
                     {navLinks.map((link) => (
-                        <a
+                        <Link
                             key={link.href}
                             href={link.href}
                             className="font-mono text-xs text-muted transition-colors duration-200 hover:text-neon-cyan"
                         >
                             {link.label}
-                        </a>
+                        </Link>
                     ))}
                 </div>
 
@@ -80,14 +81,14 @@ export default function Navbar() {
                     >
                         <div className="flex flex-col gap-4 px-4 py-6 sm:px-6">
                             {navLinks.map((link) => (
-                                <a
+                                <Link
                                     key={link.href}
                                     href={link.href}
                                     onClick={() => setIsOpen(false)}
                                     className="touch-manipulation font-mono text-sm text-muted transition-colors hover:text-neon-cyan"
                                 >
                                     {link.label}
-                                </a>
+                                </Link>
                             ))}
                         </div>
                     </motion.div>

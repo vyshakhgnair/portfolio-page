@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import { education } from "@/constants";
 import AnimatedSection from "./AnimatedSection";
 
@@ -25,10 +26,12 @@ export default function EducationSection() {
                     {education.map((item, idx) => (
                         <AnimatedSection key={idx} delay={idx * 0.12}>
                             <div className="glass group flex h-full flex-col items-center gap-4 rounded-2xl p-5 text-center transition-all duration-500 hover:border-neon-cyan/30 hover:glow-border sm:flex-row sm:items-start sm:gap-5 sm:p-8 sm:text-left">
-                                {/* Icon */}
-                                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-border bg-neon-cyan/10 transition-colors group-hover:border-neon-cyan/30">
-                                    <item.icon size={22} className="text-neon-cyan" />
-                                </div>
+                                {/* Visual (Icon or Image) */}
+                                <ImageFallback 
+                                    src={item.image} 
+                                    alt={item.degree} 
+                                    fallbackIcon={<item.icon size={22} className="text-neon-cyan" />}
+                                />
 
                                 {/* Content */}
                                 <div>
@@ -48,5 +51,36 @@ export default function EducationSection() {
 
             <div className="section-divider mx-auto mt-24 max-w-4xl sm:mt-32" />
         </section>
+    );
+}
+
+function ImageFallback({ 
+    src, 
+    alt, 
+    fallbackIcon 
+}: { 
+    src?: string; 
+    alt: string; 
+    fallbackIcon: React.ReactNode 
+}) {
+    const [error, setError] = React.useState(false);
+
+    if (!src || error) {
+        return (
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-border bg-neon-cyan/10 transition-colors group-hover:border-neon-cyan/30">
+                {fallbackIcon}
+            </div>
+        );
+    }
+
+    return (
+        <div className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-border bg-neon-cyan/10 transition-colors group-hover:border-neon-cyan/30">
+            <img 
+                src={src} 
+                alt={alt} 
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                onError={() => setError(true)}
+            />
+        </div>
     );
 }
