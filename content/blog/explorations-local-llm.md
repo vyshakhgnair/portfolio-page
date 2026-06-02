@@ -6,6 +6,8 @@ tags: ["Local LLM", "Ollama", "Qwen 2.5", "AI Engineering", "Productivity"]
 readTime: "5 min read"
 ---
 
+![Local LLM Explorations Hero](/blog/explorations-local-llm/hero.png)
+
 For a while now, I've had this one thing sitting in the back of my head.
 
 What if I could run an AI model on my own laptop? No API. No cloud. No tokens being counted somewhere. Just a model running locally, on my hardware, offline.
