@@ -27,7 +27,7 @@ It sounded like a weekend project. It took four rounds of genuine debugging befo
 
 Test case: an autonomous DevOps agent with tool access — `check_server_status()`, `restart_service()`, `rollback_deployment()`, `page_oncall()` — the kind of agent where a bad decision means real downtime.
 
-![Prompt Lab Evaluation Interface](/blog/loop-engineering-four-bugs/evaluation-cards.png)
+![Prompt Lab Interface — First Look](/blog/loop-engineering-four-bugs/prompt-lab-ui.png)
 
 ---
 
@@ -152,15 +152,11 @@ Groq error: 404 Client Error: Not Found for url:
 https://api.groq.com/openai/v1/chat/completions
 ```
 
-![Groq 404 Model Deprecated Error](/blog/loop-engineering-four-bugs/groq-404-error.png)
-
 `llama-3.3-70b-versatile` had been deprecated by Groq days earlier. Swapped to `openai/gpt-oss-120b`. Ran again:
 
 ```
 Groq rate limit hit. Wait a moment and retry.
 ```
-
-![Groq Rate Limit Error](/blog/loop-engineering-four-bugs/groq-rate-limit.png)
 
 Added retry-with-backoff. Still hit it. Added inter-call delays. **Still hit it**, immediately, in round 1.
 
